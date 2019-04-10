@@ -1,0 +1,74 @@
+//https://jscomplete.com/playground/
+/*ReactDOM.render(
+  <div>Hello World!</div>,
+  document.getElementById('mountNode')
+);*/
+
+/*function HelloWorld() {
+  return <div>Hello World</div>;
+}
+
+ReactDOM.render(
+  <HelloWorld />,
+  document.getElementById('mountNode')
+);*/
+
+//https://babeljs.io
+/*function HelloWorld() {
+  return React.createElement("div", null, "Hello World");
+}
+
+ReactDOM.render(
+  React.createElement(HelloWorld, null),
+  document.getElementById('mountNode')
+);*/
+
+
+/*function Button(){
+  const [getCounter, setCounter] = useState(0);
+  return <button onClick={() => setCounter(getCounter+1)}>Go {getCounter}</button>;
+}
+
+ReactDOM.render(
+  <Button />,
+  document.getElementById('mountNode')
+);*/
+
+/*
+function Button(props) {
+  const handleClick = () => props.onClickFunction(props.increment);
+	return (
+  	<button onClick={handleClick}>
+      +{props.increment}
+    </button>
+  );
+}
+
+function Display(props) {
+	return (
+  	<div>{props.message}</div>
+  );
+}
+
+function App() {
+	const [counter, setCounter] = useState(0);
+  const incrementCounter = (increment) => setCounter(counter+increment);
+	return (
+    <div>
+      <Button onClickFunction={incrementCounter} increment={1} />
+      <Button onClickFunction={incrementCounter} increment={5} />
+      <Button onClickFunction={incrementCounter} increment={10} />
+      <Button onClickFunction={incrementCounter} increment={100} />
+      <Display message={counter}/>
+    </div>  
+  );
+}
+
+ReactDOM.render(
+  <App />, 
+  document.getElementById('mountNode'),
+);
+
+//https://jscomplete.com/playground/rgs1.8
+
+*/

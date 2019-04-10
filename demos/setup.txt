@@ -1,0 +1,47 @@
+npm init
+npm install babel-cli babel-preset-env --save-dev
+.babelrc -> {
+    "presets": [
+        ["env", {"targets": {"browsers":"last 2 versions"}}]
+    ]
+}
+\src
+\dist
+
+"scripts": {
+    "babel": "babel src --out-dir dist",
+    "babelw": "babel src --watch --out-dir dist"
+}
+
+npm install react react-dom
+npm install babel-preset-react --save-dev
+npm install http-server --save-dev
+
+.babelrc -> {
+    "presets": [
+        "react",
+        ["env", {"targets": {"browsers":"last 2 versions"}}]
+    ]
+}
+
+"scripts": {
+    "babel": "babel src --out-dir dist",
+    "babelw": "babel src --watch --out-dir dist",
+    "start": "http-server"
+}
+
+<!doctype html>
+<html>
+    <head>
+        <title>React</title>
+        <script src="node_modules/react/umd/react.development.js"></script>
+        <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="dist/app.js"></script>
+</html>
+
+npm run babel
+npm start

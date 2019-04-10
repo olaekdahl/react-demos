@@ -1,0 +1,33 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "React demos",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "babel": "babel src --out-dir dist",
+    "babelw": "babel src --watch --out-dir dist",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaekdahl/react-demos.git"
+  },
+  "author": "Ola Ekdahl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olaekdahl/react-demos/issues"
+  },
+  "homepage": "https://github.com/olaekdahl/react-demos#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "requirejs": "^2.3.6"
+  }
+}
