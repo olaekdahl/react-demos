@@ -1,34 +1,62 @@
+function App() {
+  const [isOn, setIsOn] = React.useState(false);
+  const [timer, setTimer] = React.useState(0);
 
-function Button(props) {
-    const handleClick = () => props.onClickFunction(props.increment);
-      return (
-        <button onClick={handleClick}>
-        +{props.increment}
+  // console.log('without useEffect...')
+  // let interval;
+
+  // if (isOn) {
+  //   interval = setInterval(
+  //     () => setTimer(timer => timer + 1),
+  //     1000,
+  //   );
+  // }
+
+
+  //this runs when mounting and when component updates unless adding [] as second param.
+  React.useEffect(() => {
+    console.log('inside useEffect...')
+    let interval;
+
+    if (isOn) {
+      interval = setInterval(
+        () => setTimer(timer => timer + 1),
+        1000,
+      );
+    }
+
+    return () => clearInterval(interval);
+  }, [isOn]);
+
+  const onReset = () => {
+    setIsOn(false);
+    setTimer(0);
+  };
+
+  return (
+    <div>
+      {timer}
+
+      {!isOn && (
+        <button type="button" onClick={() => setIsOn(true)}>
+          Start
+        </button>
+      )}
+
+      {isOn && (
+        <button type="button" onClick={() => setIsOn(false)}>
+          Stop
+        </button>
+      )}
+
+      <button type="button" disabled={timer === 0} onClick={onReset}>
+        Reset
       </button>
-    );
-  }
-  
-  function Display(props) {
-      return ( 
-        <div>{props.message}</div>
-    );
-  }
-  
-  function App() {
-      const [counter, setCounter] = React.useState(0);
-    const incrementCounter = (increment) => setCounter(counter+increment);
-      return (
-      <div>
-        <Button onClickFunction={incrementCounter} increment={1} /><br/>
-        <Button onClickFunction={incrementCounter} increment={5} /><br/>
-        <Button onClickFunction={incrementCounter} increment={10} /><br/>
-        <Button onClickFunction={incrementCounter} increment={100} />
-        <Display message={counter}/>
-      </div>  
-    );
-  }
-  
-  ReactDOM.render(
-    <App />, 
-    document.getElementById('root')
+    </div>
   );
+}
+
+ReactDOM.render(
+      <App />, 
+      document.getElementById('root')
+);
