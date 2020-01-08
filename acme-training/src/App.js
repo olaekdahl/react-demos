@@ -16,17 +16,17 @@ function App() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/students">Students</NavLink>
+                            <NavLink className="nav-link" to="/students/1">Students</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/courses">Courses</NavLink>
+                            <NavLink className="nav-link" to="/courses/1">Courses</NavLink>
                         </li>
                     </ul>
                 </div>
             </nav>
             <Switch>
                 <Redirect exact from="/" to="/students" />
-                <Route exact path="/students" component={Data} />
+                <Route exact path="/students/1" component={Data} />
                 <Route path="/courses" component={Courses} />
             </Switch>
         </BrowserRouter>

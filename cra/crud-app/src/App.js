@@ -16,7 +16,7 @@ const App = (props) => {
       <div>
         <h1>The score is: {props.score}</h1>
         <button onClick={props.startGame}>Start Game</button>
-        <StopButton />
+        <StopButton stopGame={props.stopGame} />
       </div>
     );
 }
