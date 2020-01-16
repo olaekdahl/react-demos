@@ -1,4 +1,11 @@
 import React from 'react';
+import DetailsButton from './DetailsButton';
 export function Courses() {
-  return (<h1>Courses</h1>);
+  return (
+  
+  <div>
+    <h1>Courses</h1>
+    <DetailsButton name={'Ola'}></DetailsButton>
+  </div>
+ );
 }

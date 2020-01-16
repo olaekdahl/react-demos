@@ -8,7 +8,7 @@ function App() {
     return (
         <BrowserRouter>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="/">Acme Training</a>
+                <a className="navbar-brand" href="/">SWAPI</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -16,7 +16,7 @@ function App() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/students/1">Students</NavLink>
+                            <NavLink className="nav-link" to="/students/1">Characters</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/courses/1">Courses</NavLink>
