@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Data } from './components/Data';
 import { BrowserRouter, Route, Redirect, NavLink, Switch } from 'react-router-dom'
 import { Courses } from './components/Courses';
@@ -16,17 +16,17 @@ function App() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/students/1">Characters</NavLink>
+                            <NavLink className="nav-link" to="/students/">Characters</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/courses/1">Courses</NavLink>
+                            <NavLink className="nav-link" to="/courses/">Courses</NavLink>
                         </li>
                     </ul>
                 </div>
             </nav>
             <Switch>
                 <Redirect exact from="/" to="/students" />
-                <Route exact path="/students/1" component={Data} />
+                <Route exact path="/students/" component={Data} />
                 <Route path="/courses" component={Courses} />
             </Switch>
         </BrowserRouter>

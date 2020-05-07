@@ -1,5 +1,6 @@
 import React from 'react';
 import { RenderTableRows } from './RenderTableRowsSWAPI';
+// import { RenderTableRows } from './RenderTableRows';
 import { RenderTableheader } from './RenderTableheader';
 const data = { students: [{ id: 1, name: 'Ola' }, { id: 2, name: 'Jordan' }, { id: 3, name: 'Ben' }] };
 

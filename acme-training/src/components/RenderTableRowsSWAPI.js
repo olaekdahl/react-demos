@@ -2,10 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import DetailsButton from './DetailsButton';
 
-const api = `https://swapi.co/api/people/?format=json`;
+const api = `https://swapi.dev/api/people/?format=json`;
 export function RenderTableRows(props) {
   const [state, setState] = React.useState({ results: [] });
-  const [details, setDetails] = React.useState({show: true, name: ''});
+  const [, setDetails] = React.useState({show: true, name: ''});
   
   React.useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +15,7 @@ export function RenderTableRows(props) {
       setState(result.data);
     };
     fetchData();
-  });
+  }, []);
   const rows = state.results.map((item, idx) => {
     const { name, homeworld } = item;
     return (
@@ -28,8 +28,7 @@ export function RenderTableRows(props) {
   return (<React.Fragment>{rows}</React.Fragment>);
 }
 
-//{ this.state.showMessage && (<div>hello world!</div>) }
 function rowDetails(event){
-  // console.log(event.currentTarget);
-  //console.log(event.currentTarget.getAttribute('data-item'));
+  console.log(event.currentTarget);
+  console.log(event.currentTarget.getAttribute('data-item'));
 }

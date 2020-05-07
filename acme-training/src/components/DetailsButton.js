@@ -27,9 +27,6 @@ let DetailsButton = (props) => {
     let closeModal = () => {
         setState({ modalIsOpen: false });
     }
-    const showDetails = (event, name) => {
-        console.log(name);
-    }
 
     Modal.setAppElement('#root');
 
