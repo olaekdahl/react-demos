@@ -12,7 +12,7 @@ export function Data() {
       </tr>
     </thead>
     <tbody>
-      <RenderTableRows data={data} />
+      <RenderTableRows />
     </tbody>
   </table>);
 }

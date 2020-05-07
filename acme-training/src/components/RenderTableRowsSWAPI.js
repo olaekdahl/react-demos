@@ -15,7 +15,7 @@ export function RenderTableRows(props) {
       setState(result.data);
     };
     fetchData();
-  }, []);
+  },[]);
   const rows = state.results.map((item, idx) => {
     const { name, homeworld } = item;
     return (

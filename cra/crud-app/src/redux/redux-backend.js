@@ -13,7 +13,6 @@ export const stopGame = () => {
   };
 };
 
-
 export const setPlayerScore = score => {
     return {
         type: "SET_PLAYER_SCORE",
